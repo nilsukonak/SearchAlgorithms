@@ -2,26 +2,26 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-// Binary Search (Ýkili Arama) fonksiyonu
+// Binary Search (Ä°kili Arama) fonksiyonu
 int binarySearch(int arr[], int low, int high, int key) {
     while (low <= high) {
-        int mid = low + (high - low) / 2; // Dizinin orta elemanýnýn indisini bulma
+        int mid = low + (high - low) / 2; // Dizinin orta elemanÄ±nÄ±n indisini bulma
 
-        if (arr[mid] == key) // Anahtar deðeri bulundu
+        if (arr[mid] == key) // Anahtar deÄŸeri bulundu
             return mid;
-        else if (arr[mid] < key) // Anahtar deðeri, ortadaki elemandan büyük, sað tarafa bakýlýr
+        else if (arr[mid] < key) // Anahtar deÄŸeri, ortadaki elemandan bÃ¼yÃ¼k, saÄŸ tarafa bakÄ±lÄ±r
             low = mid + 1;
-        else // Anahtar deðeri, ortadaki elemandan küçük, sol tarafa bakýlýr
+        else // Anahtar deÄŸeri, ortadaki elemandan kÃ¼Ã§Ã¼k, sol tarafa bakÄ±lÄ±r
             high = mid - 1;
     }
 
-    return -1; // Anahtar deðeri bulunamadý
+    return -1; // Anahtar deÄŸeri bulunamadÄ±
 }
 
 int main() {
     int dizi[] = {4, 8, 3, 84, 47, 76, 9, 24, 68};
     int n = sizeof(dizi) / sizeof(dizi[0]);
-    int anahtar = 9; // Aranacak anahtar deðeri
+    int anahtar = 9; // Aranacak anahtar deÄŸeri
 
     int sonuc = binarySearch(dizi, 0, n - 1, anahtar);
 
