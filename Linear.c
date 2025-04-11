@@ -7,10 +7,10 @@ int linearSearch(int arr[], int n, int x) {       //n dizi boyutu, x aranacak el
     int i;
     for (i = 0; i < n; i++) {
         if (arr[i] == x) {
-            return i;  // Elemanın dizideki indisini döndürecek
+            return i;  // ElemanÃ½n dizideki indisini dÃ¶ndÃ¼recek
         }
     }
-    return -1;  // Eleman dizide bulunamadıysa -1 döndürecek
+    return -1;  // Eleman dizide bulunamadÃ½ysa -1 dÃ¶ndÃ¼recek
 }
 
 int main() {
